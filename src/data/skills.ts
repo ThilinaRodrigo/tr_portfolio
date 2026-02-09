@@ -20,6 +20,7 @@ import {
 
 import { VscVscode } from "react-icons/vsc";
 import { TbBrandReactNative } from "react-icons/tb";
+import { PiFileSql } from "react-icons/pi";
 
 import {
   FaCode,
@@ -58,7 +59,7 @@ export const skills = [
       category: "Database",
       icon: FaDatabase,
       items: [
-        { name: "SQL", icon: SiMysql },
+        { name: "SQL", icon: PiFileSql },
         { name: "MySQL", icon: SiMysql },
         { name: "PostgreSQL", icon: SiPostgresql },
       ],

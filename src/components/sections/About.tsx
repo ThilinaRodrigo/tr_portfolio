@@ -2,8 +2,8 @@ import { useState } from "react";
 import {
   FaGraduationCap,
 } from "react-icons/fa";
-import {skills} from "../../constant/skills";
-import { education } from "../../constant/education";
+import {skills} from "../../data/skills";
+import { education } from "../../data/education";
 
 export default function About() {
   
