@@ -1,7 +1,14 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { FiMail, FiPhone, FiMapPin, FiSend } from "react-icons/fi";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  const form = useRef<HTMLFormElement>(null);
+  // access env variables
+  const serviceID = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID!;
+  const templateID = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID!;
+  const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY!;
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -9,23 +16,25 @@ export default function Contact() {
     message: "",
   });
 
+  const [status, setStatus] = useState("");
+
   const contactInfo = [
     {
       icon: <FiMail size={24} />,
       title: "Email Us",
-      detail: "jprashandh@gmail.com",
-      link: "mailto:jprashandh@gmail.com",
+      detail: "thilinalakshan2001@gmail.com",
+      link: "mailto:thilinalakshan2001@gmail.com",
     },
     {
       icon: <FiPhone size={24} />,
       title: "Call Us",
-      detail: "+94 756595650",
-      link: "tel:+94756595650",
+      detail: "+94 772744053",
+      link: "tel:+94772744053",
     },
     {
       icon: <FiMapPin size={24} />,
       title: "Visit Us",
-      detail: "Batticaloa, Sri Lanka",
+      detail: "Horana, Sri Lanka",
       link: "#",
     },
   ];
@@ -41,7 +50,34 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        serviceID,
+        templateID,
+        form.current,
+        publicKey
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setStatus("Message sent successfully!");
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+          setTimeout(() => setStatus(""), 5000);
+        },
+        (error) => {
+          console.log(error.text);
+          setStatus("Failed to send message. Try again.");
+          setTimeout(() => setStatus(""), 5000);
+        }
+      );
   };
 
   return (
@@ -77,9 +113,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">
-                      {info.title}
-                    </h3>
+                    <h3 className="text-lg font-semibold mb-1">{info.title}</h3>
                     <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors">
                       {info.detail}
                     </p>
@@ -92,6 +126,7 @@ export default function Contact() {
           {/* Right - Contact Form */}
           <div className="lg:col-span-2">
             <form
+              ref={form}
               onSubmit={handleSubmit}
               className="bg-linear-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 space-y-6"
             >
@@ -170,6 +205,8 @@ export default function Contact() {
                 </span>
                 Send Message
               </button>
+
+              {status && <p className="mt-2 text-center">{status}</p>}
             </form>
           </div>
         </div>
