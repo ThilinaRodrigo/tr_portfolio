@@ -10,7 +10,7 @@ import Services from './components/sections/Services'
 
 function App() {
   return (
-    <div>
+    <div className='w-full'>
       {/* Navbar fixed at top */}
       <Navbar />
 

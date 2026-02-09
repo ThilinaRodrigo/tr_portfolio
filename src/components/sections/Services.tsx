@@ -87,7 +87,7 @@ const Services: React.FC = () => {
         {/* Carousel */}
         <div className="relative">
           {/* Navigation Buttons */}
-          <div className="absolute -top-20 right-0 flex gap-4">
+          <div className="absolute -top-20 right-0 items-center gap-4 hidden lg:flex">
             <button
               onClick={prevSlide}
               className="w-12 h-12 rounded-full border border-gray-700 hover:border-blue-500 flex items-center justify-center transition-all duration-300 hover:bg-blue-500/10"

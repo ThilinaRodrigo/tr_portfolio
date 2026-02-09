@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
           <div className="flex items-center gap-3">
             <div className="h-1 w-1 bg-blue-500 rounded-full animate-pulse" />
             <p className="text-xl lg:text-2xl text-gray-300 font-semibold">
-              Full Stack Developer | Researcher 
+              Full Stack Developer | CS Undergraduate 
             </p>
           </div>
 

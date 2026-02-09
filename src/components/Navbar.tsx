@@ -9,9 +9,9 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: "Home", to: "hero" },
-    { name: "Portfolio", to: "projects" },
     { name: "Services", to: "services" },
     { name: "About", to: "about" },
+    { name: "Portfolio", to: "projects" },
     { name: "Contact", to: "contact" },
   ];
 
