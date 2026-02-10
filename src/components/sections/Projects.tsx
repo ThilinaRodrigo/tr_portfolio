@@ -7,8 +7,16 @@ export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [selectedProject, setSelectedProject] = useState<Project | null | undefined>();
   const [open, setOpen] = useState(false);
+  const [visibleProjects, setVisibleProjects] = useState(3);
 
-  const filters = ["All", "Web Applications", "Mobile App", "UI/UX"];
+  const filters = ["All", "Web Applications", "Mobile App"];
+
+  const loadMore = () => {
+    setVisibleProjects((prev) => prev + 3);
+  } 
+  const loadLess = () => {
+    setVisibleProjects((prev) => Math.max(prev - 3, 3));
+  }
 
   const filteredProjects =
     activeFilter === "All"
@@ -30,7 +38,7 @@ export default function Projects() {
           </p>
         </div>
 
-        {/* Filters */}
+        {/* Category Filters */}
         <div className="flex flex-wrap justify-center gap-4 mb-16">
           {filters.map((filter) => (
             <button
@@ -49,7 +57,7 @@ export default function Projects() {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
+          {filteredProjects.slice(0, visibleProjects).map((project) => (
             <div
               key={project.id}
               className="group relative bg-linear-to-br from-gray-800/30 to-gray-900/30
@@ -67,7 +75,7 @@ export default function Projects() {
 
                 {/* Hover Overlay */}
                 <button
-                  onClick={() => {  setSelectedProject(project); setOpen(true); }}
+                  onClick={() => { setSelectedProject(project); setOpen(true); }}
                   className="absolute inset-0 bg-black/60 opacity-0
                              group-hover:opacity-100 flex items-center justify-center
                              text-white text-lg font-semibold transition-opacity"
@@ -76,10 +84,18 @@ export default function Projects() {
                 </button>
 
                 {/* Category Badge */}
-                <span className="absolute top-4 right-4 px-4 py-1.5
-                                 bg-blue-600/90 rounded-full text-sm font-medium">
+                <span className="absolute top-4 right-4 px-4 py-1
+                                 bg-blue-600/90 rounded-full text-[12px] font-medium">
                   {project.category}
                 </span>
+
+                {/* Status Badge */}
+                {project.status && (
+                  <span className="absolute top-4 left-4 px-4 py-1
+                                   bg-green-600/90 rounded-full text-[12px] font-medium">
+                    {project.status}
+                  </span>
+                )}
               </div>
 
               {/* Info */}
@@ -109,13 +125,37 @@ export default function Projects() {
             </div>
           ))}
         </div>
+        {/* Load More Button */}
+        {visibleProjects < filteredProjects.length && (
+          <div className="flex justify-center mt-12">
+            <button
+              onClick={loadMore}
+              className="px-8 py-3 bg-transparent border border-blue-600 rounded-lg font-semibold hover:border-blue-500 transition"
+            >
+              Load More
+            </button>
+          </div>
+        )}
+
+        {/* Load Less Button */}
+        {visibleProjects > 3 && (
+          <div className="flex justify-center mt-4">
+            <button
+              onClick={loadLess}
+              className="px-8 py-3 bg-transparent border border-blue-600 rounded-lg font-semibold hover:border-blue-500 transition"
+            >
+              Load Less
+            </button>
+          </div>
+        )}
+        
       </div>
 
-      {/* ✅ SINGLE MODAL */}
-      {open &&  (
+      {/* SINGLE MODAL */}
+      {open && (
         <ProjectModal
           project={selectedProject}
-          onClose={() => {setOpen(false); }}
+          onClose={() => { setOpen(false); }}
         />
       )}
     </section>

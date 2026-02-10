@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
-import { FiMail, FiPhone, FiMapPin, FiSend } from "react-icons/fi";
+import { FiMail, FiPhone,FiSend } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
@@ -21,9 +22,15 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: <FiMail size={24} />,
-      title: "Email Us",
+      title: "Email",
       detail: "thilinalakshan2001@gmail.com",
       link: "mailto:thilinalakshan2001@gmail.com",
+    },
+    {
+      icon: <FaWhatsapp size={24} />,
+      title: "WhatsApp",
+      detail: "+94 772744053",
+      link: "https://wa.me/94772744053",
     },
     {
       icon: <FiPhone size={24} />,
@@ -31,12 +38,12 @@ export default function Contact() {
       detail: "+94 772744053",
       link: "tel:+94772744053",
     },
-    {
-      icon: <FiMapPin size={24} />,
-      title: "Visit Us",
-      detail: "Horana, Sri Lanka",
-      link: "#",
-    },
+    // {
+    //   icon: <FiMapPin size={24} />,
+    //   title: "Visit Us",
+    //   detail: "Horana, Sri Lanka",
+    //   link: "#",
+    // },
   ];
 
   const handleChange = (

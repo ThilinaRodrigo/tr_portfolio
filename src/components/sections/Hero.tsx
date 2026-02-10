@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen bg-linear-to-br from-gray-900 via-[#0a0e27] to-black text-white flex items-center px-4 sm:px-6 lg:px-12"
+      className="min-h-screen bg-linear-to-br from-gray-900 via-[#0a0e27] to-black text-white flex items-center px-4 sm:px-6 lg:px-12 pb-8 lg:pb-0"
     >
       <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
         {/* LEFT CONTENT */}
@@ -119,7 +119,7 @@ const Hero: React.FC = () => {
           <img
             src={my1}
             alt="Thilina Rodrigo"
-            className="w-72 sm:w-80 lg:w-105 rounded-2xl  transition duration-500 shadow-2xl"
+            className="w-72 sm:w-80 lg:w-105 rounded-2xl mt-14 lg:mt-0 transition duration-500 shadow-2xl"
           />
         </motion.div>
       </div>
