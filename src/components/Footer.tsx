@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
 import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
+import { profiles } from "../data/profiles";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -20,10 +21,10 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: <FaGithub />, url: "https://github.com/", label: "GitHub" },
-    { icon: <FaLinkedin />, url: "https://linkedin.com/", label: "LinkedIn" },
-    { icon: <FaFacebook />, url: "https://facebook.com/", label: "Facebook" },
-    { icon: <FaInstagram />, url: "https://instagram.com/", label: "Instagram" },
+    { icon: <FaGithub />, url: profiles.github, label: "GitHub" },
+    { icon: <FaLinkedin />, url: profiles.linkedin, label: "LinkedIn" },
+    { icon: <FaFacebook />, url: profiles.facebook, label: "Facebook" },
+    { icon: <FaInstagram />, url: profiles.instagram, label: "Instagram" },
   ];
 
   return (
