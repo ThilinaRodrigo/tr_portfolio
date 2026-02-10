@@ -64,7 +64,7 @@ export default function About() {
                          hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 transition"
             >
               <div className="flex gap-6">
-                <div className="w-14 h-14 rounded-full bg-blue-500/10 border border-blue-500/30 flex items-center justify-center">
+                <div className="hidden lg:flex lg:w-14 lg:h-14 rounded-full bg-blue-500/10 border border-blue-500/30 items-center justify-center">
                   <FaGraduationCap className="text-blue-400 text-xl" />
                 </div>
 

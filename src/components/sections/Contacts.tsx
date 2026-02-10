@@ -34,7 +34,7 @@ export default function Contact() {
     },
     {
       icon: <FiPhone size={24} />,
-      title: "Call Us",
+      title: "Phone",
       detail: "+94 772744053",
       link: "tel:+94772744053",
     },
