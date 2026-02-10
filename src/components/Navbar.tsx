@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-scroll";
 import logo from "../assets/logo.png";
 import { HiMenu, HiX, HiDownload } from "react-icons/hi";
+import resume from "../data/cv/thilinaRodrigo.pdf";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,7 +55,7 @@ const Navbar: React.FC = () => {
 
           {/* Download CV */}
           <a
-            href="/cv.pdf"
+            href={resume}
             download
             className="group ml-2 flex items-center gap-2 bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-2.5 rounded-lg transition-all duration-300 font-semibold shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 hover:scale-105"
           >
@@ -112,7 +113,7 @@ const Navbar: React.FC = () => {
 
           {/* Mobile Download CV */}
           <a
-            href="/cv.pdf"
+            href={resume}
             download
             onClick={() => setIsOpen(false)}
             className="flex items-center justify-center gap-2 bg-linear-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-lg transition-all duration-300 font-semibold shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 mt-4"

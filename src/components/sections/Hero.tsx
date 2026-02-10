@@ -4,6 +4,7 @@ import my1 from "../../assets/main/my1.png";
 import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 import { profiles } from "../../data/profiles";
+import resume from "../../data/cv/thilinaRodrigo.pdf";
 
 const Hero: React.FC = () => {
   return (
@@ -60,7 +61,7 @@ const Hero: React.FC = () => {
             </Link>
 
             <a
-              href="/cv.pdf"
+              href={resume}
               download
               title="Download CV"
               className="p-3 border border-gray-700 rounded-lg hover:border-green-500 hover:bg-green-500/10 transition"
