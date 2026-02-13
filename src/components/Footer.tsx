@@ -16,7 +16,6 @@ const Footer: React.FC = () => {
   const services = [
     "Web Development",
     "Mobile Apps",
-    "UI/UX Design",
     "Backend Systems",
   ];
 
@@ -40,7 +39,7 @@ const Footer: React.FC = () => {
 
             <p className="text-gray-400 leading-relaxed max-w-sm">
               Building robust, scalable, and aesthetic digital solutions.
-              Expertise in full-stack development and modern UI/UX design.
+              Expertise in full-stack development.
             </p>
 
             {/* Social Icons */}

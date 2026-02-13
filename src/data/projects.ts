@@ -3,6 +3,7 @@ import ai_app from "../assets/projects/ai_app.png";
 import job_finder from "../assets/projects/job_finder.png";
 import erp1 from "../assets/projects/erp1.png";
 import erp_customer from "../assets/projects/erp_customer.png";
+import portfolio_template_image from "../assets/projects/portfolio.png";
 
 
 export const projects: Project[] = [
@@ -95,4 +96,23 @@ export const projects: Project[] = [
   backendUrl: "https://github.com/ThilinaRodrigo/job-portal-microservices",
   status: "on hold"
 },
+{
+  id: 5,
+  title: "Developer Portfolio",
+  subtitle: "Minimal React + TypeScript Developer Portfolio",
+  description:
+    "A clean and minimal portfolio template built using React, TypeScript, and Vite. This project serves as a modern foundation for showcasing your personal projects and skills. It includes a fast development setup with Hot Module Replacement (HMR), ESLint configuration for TypeScript support, and ready-to-customize structure that helps developers present their work online with ease.",
+  category: "Web Applications",
+  image: portfolio_template_image,
+  tags: [
+    "React",
+    "TypeScript",
+    "Vite",
+    "mail.js",
+    "Tailwind CSS",
+  ],
+  frontendUrl: "https://github.com/ThilinaRodrigo/tr_portfolio",
+  liveDemoUrl: "https://www.thilinarodrigo.me/",
+}
+
 ];
