@@ -108,7 +108,7 @@ export const projects: Project[] = [
     "React",
     "TypeScript",
     "Vite",
-    "mail.js",
+    "EmailJS",
     "Tailwind CSS",
   ],
   frontendUrl: "https://github.com/ThilinaRodrigo/tr_portfolio",

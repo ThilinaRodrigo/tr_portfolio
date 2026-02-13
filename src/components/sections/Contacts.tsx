@@ -10,14 +10,18 @@ export default function Contact() {
   const templateID = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID!;
   const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY!;
 
+// {{from_name}}
+// {{from_email}}
+
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    from_name: "",
+    from_email: "",
     subject: "",
     message: "",
   });
 
   const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const contactInfo = [
     {
@@ -60,6 +64,8 @@ export default function Contact() {
 
     if (!form.current) return;
 
+    setLoading(true);
+
     emailjs
       .sendForm(
         serviceID,
@@ -72,8 +78,8 @@ export default function Contact() {
           console.log(result.text);
           setStatus("Message sent successfully!");
           setFormData({
-            name: "",
-            email: "",
+            from_name: "",
+            from_email: "",
             subject: "",
             message: "",
           });
@@ -84,7 +90,8 @@ export default function Contact() {
           setStatus("Failed to send message. Try again.");
           setTimeout(() => setStatus(""), 5000);
         }
-      );
+      )
+      .finally(() => setLoading(false));
   };
 
   return (
@@ -145,8 +152,8 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
-                    name="name"
-                    value={formData.name}
+                    name="from_name"
+                    value={formData.from_name}
                     onChange={handleChange}
                     required
                     placeholder="John Doe"
@@ -160,8 +167,8 @@ export default function Contact() {
                   </label>
                   <input
                     type="email"
-                    name="email"
-                    value={formData.email}
+                    name="from_email"
+                    value={formData.from_email}
                     onChange={handleChange}
                     required
                     placeholder="john@example.com"
@@ -205,13 +212,29 @@ export default function Contact() {
               {/* Submit */}
               <button
                 type="submit"
-                className="group px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-[1.02] flex items-center gap-2"
+                disabled={loading}
+                className={`group px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg flex items-center gap-2
+                  ${
+                    loading
+                      ? "bg-blue-600/60 cursor-not-allowed"
+                      : "bg-blue-600 hover:bg-blue-700 hover:scale-[1.02] shadow-blue-500/25 hover:shadow-blue-500/40"
+                  }`}
               >
-                <span className="text-lg group-hover:translate-x-1 transition-transform">
-                  <FiSend />
-                </span>
-                Send Message
+                {loading ? (
+                  <>
+                    <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <span className="text-lg group-hover:translate-x-1 transition-transform">
+                      <FiSend />
+                    </span>
+                    Send Message
+                  </>
+                )}
               </button>
+
 
               {status && <p className="mt-2 text-center">{status}</p>}
             </form>
