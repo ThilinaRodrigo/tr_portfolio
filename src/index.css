@@ -1,4 +1,15 @@
-html,
-body {
+:root {
+  color-scheme: dark;
+  background-color: #030712;
   overflow-x: hidden;
+}
+
+html,
+body,
+#root {
+  background-color: #030712;
+  color: #ffffff;
+  overflow-x: hidden;
+  max-width: 100vw;
+  scroll-behavior: smooth;
 }

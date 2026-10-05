@@ -57,7 +57,7 @@ const Services: React.FC = () => {
   return (
     <section
       id="services"
-      className="min-h-screen bg-linear-to-br from-gray-900 via-black to-gray-900 text-white px-8 py-20"
+      className="min-h-screen bg-gray-950/40 backdrop-blur-3xl text-white px-8 py-20"
     >
       <div className="max-w-7xl mx-auto">
         {/* Features Bar */}
