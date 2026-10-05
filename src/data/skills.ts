@@ -5,10 +5,12 @@ import {
   SiReact,
   SiPhp,
   SiSpringboot,
+  SiGo,
   SiMysql,
   SiPostgresql,
   SiDocker,
   SiAmazon,
+  SiGithubactions,
   SiGit,
   SiGithub,
   SiPostman,
@@ -50,9 +52,10 @@ export const skills = [
       category: "Backend",
       icon: FaServer,
       items: [
+        { name: "Go (Golang)", icon: SiGo },
         { name: "Java", icon: FaJava },
-        { name: "PHP", icon: SiPhp },
         { name: "Spring Boot", icon: SiSpringboot },
+        { name: "PHP", icon: SiPhp },
       ],
     },
     {
@@ -68,8 +71,9 @@ export const skills = [
       category: "DevOps & Cloud",
       icon: FaCloud,
       items: [
-        { name: "AWS", icon: SiAmazon },
+        { name: "GitHub Actions", icon: SiGithubactions },
         { name: "Docker", icon: SiDocker },
+        { name: "AWS", icon: SiAmazon },
       ],
     },
     {

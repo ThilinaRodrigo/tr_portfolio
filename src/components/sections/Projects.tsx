@@ -40,7 +40,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-white px-6 lg:px-8 py-24 relative overflow-hidden"
+      className="min-h-screen bg-gray-950/40 backdrop-blur-3xl text-white px-6 lg:px-8 py-24 relative overflow-hidden"
     >
       {/* Background ambient lighting */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/10 blur-[140px] pointer-events-none rounded-full" />
