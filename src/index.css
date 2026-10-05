@@ -1,4 +1,12 @@
+:root {
+  color-scheme: dark;
+  background-color: #030712;
+}
+
 html,
 body {
+  background-color: #030712;
+  color: #ffffff;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }

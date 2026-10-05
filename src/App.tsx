@@ -11,7 +11,7 @@ import Services from './components/sections/Services'
 
 function App() {
   return (
-    <div className='w-full'>
+    <div className='w-full min-h-screen bg-gray-950 text-white selection:bg-blue-500/30 selection:text-blue-200'>
       {/* Navbar fixed at top */}
       <Navbar />
 

@@ -1,64 +1,70 @@
 import { type Certificate } from "../types/certificate.type";
+import goImg from "../assets/certificates/go.jpg";
+import springbootImg from "../assets/certificates/springboot.jpg";
+import githubActionImg from "../assets/certificates/githubAction.jpg";
 
 export const certificates: Certificate[] = [
   {
     id: 1,
-    title: "Full Stack Web Development Certification",
-    issuer: "Meta / Coursera",
-    issueDate: "2024",
-    category: "Web Applications",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
-    skills: ["React", "Node.js", "TypeScript", "Tailwind CSS", "REST APIs"],
-    credentialId: "META-FSWD-98234",
-    credentialUrl: "https://coursera.org",
-    description: "Comprehensive professional certification covering modern frontend architecture, backend REST APIs, responsive design, and database integration."
+    title: "Go: The Complete Guide",
+    issuer: "Udemy",
+    issueDate: "2026",
+    category: "Backend Development",
+    image: goImg,
+    skills: [
+      "Go",
+      "Golang",
+      "REST APIs",
+      "Concurrency",
+      "Backend Development",
+    ],
+    credentialId: "UC-544f329b-6a5a-4e52-a961-040c7dea9b38",
+    credentialUrl:
+      "https://www.udemy.com/certificate/UC-544f329b-6a5a-4e52-a961-040c7dea9b38/",
+    description:
+      "Comprehensive Go programming course covering core language fundamentals, concurrency, interfaces, error handling, web development, and backend programming.",
   },
+
   {
     id: 2,
-    title: "AWS Certified Cloud Practitioner",
-    issuer: "Amazon Web Services (AWS)",
-    issueDate: "2024",
-    category: "Cloud & DevOps",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    skills: ["AWS EC2", "S3", "Lambda", "Cloud Architecture", "IAM"],
-    credentialId: "AWS-CCP-847291",
-    credentialUrl: "https://aws.amazon.com/verification",
-    description: "Validation of overall understanding of AWS Cloud platform, core security practices, cloud services architecture, and deployment patterns."
+    title: "Spring Boot & Spring Framework Tutorial for Beginners",
+    issuer: "Udemy",
+    issueDate: "2026",
+    category: "Backend Development",
+    image: springbootImg,
+    skills: [
+      "Java",
+      "Spring Boot",
+      "Spring Framework",
+      "REST APIs",
+      "Spring Data JPA",
+      "Backend Development",
+    ],
+    credentialId: "Udemy Course Certificate",
+    credentialUrl:
+      "https://www.udemy.com/certificate/UC-90825b89-bf36-480c-a84b-a93c8af7e283/",
+    description:
+      "Practical training in Java backend development using Spring Framework and Spring Boot, covering application development, REST APIs, dependency injection, and backend architecture.",
   },
+
   {
     id: 3,
-    title: "Mobile App Development with React Native",
-    issuer: "Udemy Certified",
-    issueDate: "2023",
-    category: "Mobile App",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80",
-    skills: ["React Native", "Expo", "Redux Toolkit", "Mobile UI/UX"],
-    credentialId: "UC-RN-773910",
-    credentialUrl: "https://udemy.com",
-    description: "Specialized certification for building cross-platform iOS and Android mobile applications using React Native, Expo, and native device capabilities."
+    title: "GitHub Actions",
+    issuer: "KodeKloud",
+    issueDate: "Feb 2026",
+    category: "DevOps & CI/CD",
+    image: githubActionImg,
+    skills: [
+      "GitHub Actions",
+      "CI/CD",
+      "DevOps",
+      "Automation",
+      "GitHub",
+    ],
+    credentialId: "048ebab3-bfe0-4c33-b466-8e62aea6443b",
+    credentialUrl:
+      "https://learn.kodekloud.com/learn/certificate/048ebab3-bfe0-4c33-b466-8e62aea6443b",
+    description:
+      "Training focused on GitHub Actions and CI/CD automation, covering workflows, automated builds, testing, deployments, and DevOps practices.",
   },
-  {
-    id: 4,
-    title: "PostgreSQL & Database Architecture",
-    issuer: "LinkedIn Learning",
-    issueDate: "2023",
-    category: "Database & Backend",
-    image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=800&q=80",
-    skills: ["PostgreSQL", "SQL Optimization", "Data Modeling", "Prisma ORM"],
-    credentialId: "LIL-DB-551029",
-    credentialUrl: "https://linkedin.com",
-    description: "Advanced training in relational database management, schema design, index optimization, complex SQL queries, and ORM integration."
-  },
-  {
-    id: 5,
-    title: "AI & Machine Learning Fundamentals",
-    issuer: "DeepLearning.AI",
-    issueDate: "2024",
-    category: "Mobile & AI",
-    image: "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
-    skills: ["Python", "TensorFlow", "Prompt Engineering", "LLM APIs"],
-    credentialId: "DLAI-ML-309182",
-    credentialUrl: "https://deeplearning.ai",
-    description: "Core concepts of machine learning algorithms, Neural Networks, AI integration in modern web & mobile applications, and model APIs."
-  }
 ];
