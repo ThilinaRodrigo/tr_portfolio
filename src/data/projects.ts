@@ -84,7 +84,7 @@ export const projects: Project[] = [
     subtitle: "AI-Powered Agricultural Management, Crop Disease Detection & Farmer Marketplace",
     description:
       "Rice Leaf AI is an enterprise end-to-end agricultural management and disease detection ecosystem. It features a cross-platform React Native (Expo SDK 54) mobile client, a Vite + React system administration portal, a high-performance Go (Gin) Modular Monolith REST API backend with PostgreSQL, and a Python (FastAPI + TensorFlow 2.x) machine learning inference service. The platform delivers instant 5-class rice leaf disease diagnosis, an interactive AI Agronomist chatbot, an agricultural marketplace for crop inputs, a farmer community forum with voting and comments, multilingual remedy knowledge bases, and real-time administrative analytics.",
-    category: "Mobile & AI Applications", // Or "Mobile Applications" / "Full-Stack Applications"
+    category: "Mobile App", // Or "Mobile Applications" / "Full-Stack Applications"
     image: rice_leaf_ai_image,
     tags: [
       "React Native",

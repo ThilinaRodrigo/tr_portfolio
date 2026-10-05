@@ -36,7 +36,7 @@ export default function CertificateModal({ certificate, onClose }: CertificateMo
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
           className="relative z-20 w-full max-w-3xl max-h-[90vh] overflow-y-auto
-                     bg-linear-to-br from-slate-900 via-gray-900 to-slate-950
+                     bg-gradient-to-br from-slate-900 via-gray-900 to-slate-950
                      border border-gray-700/60 rounded-2xl shadow-2xl shadow-blue-500/10 custom-scrollbar"
         >
           {/* Close Button */}
@@ -133,7 +133,7 @@ export default function CertificateModal({ certificate, onClose }: CertificateMo
                   href={certificate.credentialUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-2.5 rounded-lg bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 transition-all duration-300"
+                  className="flex items-center gap-2 px-6 py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 transition-all duration-300"
                 >
                   <span>Verify Credential</span>
                   <ExternalLink className="w-4 h-4" />

@@ -20,19 +20,22 @@ export default function Certificates() {
   return (
     <section
       id="certificates"
-      className="min-h-screen bg-transparent text-white px-6 lg:px-8 py-20 border-t border-gray-800/40"
+      className="min-h-screen bg-transparent text-white px-6 lg:px-8 py-20 border-t border-gray-800/40 relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto">
+      {/* Background ambient lighting */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/10 blur-[140px] pointer-events-none rounded-full" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-semibold mb-2">
-            <Award className="w-4 h-4" />
+            <Award className="w-4 h-4 text-blue-400" />
             <span>Qualifications & Achievements</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold bg-linear-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
-            Certificates & Credentials
+          <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
+            Certificates & <span className="text-blue-500">Credentials</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-400 text-base lg:text-lg max-w-3xl mx-auto leading-relaxed">
             Verified certifications and professional qualifications validating my technical expertise.
           </p>
         </div>
@@ -42,18 +45,18 @@ export default function Certificates() {
           {certificates.slice(0, visibleCount).map((cert) => (
             <div
               key={cert.id}
-              className="group relative bg-linear-to-br from-gray-800/40 via-gray-900/50 to-black/60
+              className="group relative bg-gradient-to-br from-gray-800/40 via-gray-900/50 to-black/60
                          backdrop-blur-md border border-gray-800/80 rounded-2xl overflow-hidden
                          hover:border-blue-500/50 transition-all duration-500
                          hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1.5 flex flex-col justify-between"
             >
               <div>
                 {/* Image Preview Container */}
-                <div className="relative h-56 overflow-hidden bg-gray-950">
+                <div className="relative h-48 sm:h-52 overflow-hidden bg-gray-950">
                   <img
                     src={cert.image}
                     alt={cert.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
 
                   {/* Overlay for quick action */}

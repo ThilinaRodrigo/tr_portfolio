@@ -27,13 +27,13 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-linear-to-br from-gray-900 via-[#0a0e27] to-black text-white border-t border-gray-800/50">
+    <footer className="bg-gradient-to-br from-gray-900 via-[#0a0e27] to-black text-white border-t border-gray-800/50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
         {/* Main Footer */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Thilina Rodrigo
             </h3>
 

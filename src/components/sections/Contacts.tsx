@@ -119,7 +119,7 @@ export default function Contact() {
               <a
                 key={index}
                 href={info.link}
-                className="group block bg-linear-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm border border-gray-800 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1"
+                className="group block bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm border border-gray-800 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1"
               >
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-500 group-hover:scale-110 group-hover:bg-blue-600/20 transition-all duration-300">
@@ -142,7 +142,7 @@ export default function Contact() {
             <form
               ref={form}
               onSubmit={handleSubmit}
-              className="bg-linear-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 space-y-6"
+              className="bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 space-y-6"
             >
               {/* Name & Email */}
               <div className="grid md:grid-cols-2 gap-6">
