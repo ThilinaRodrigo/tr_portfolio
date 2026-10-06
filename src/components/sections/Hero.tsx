@@ -96,7 +96,7 @@ const Hero: React.FC = () => {
               to="contact"
               smooth
               duration={500}
-              className="cursor-pointer px-6 py-3.5 bg-transparent border border-gray-800 hover:border-gray-700 text-gray-400 hover:text-white rounded-xl font-medium text-sm transition"
+              className="cursor-pointer px-6 py-3.5 bg-blue-600/15 hover:bg-blue-600 text-blue-300 hover:text-white border border-blue-500/30 hover:border-blue-400 rounded-xl font-semibold text-sm shadow-md shadow-blue-600/15 hover:shadow-blue-600/40 hover:scale-[1.02] transition-all duration-300"
             >
               Contact Me
             </Link>

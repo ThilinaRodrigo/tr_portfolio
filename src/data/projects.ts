@@ -105,6 +105,7 @@ export const projects: Project[] = [
     ],
     frontendUrl: "https://github.com/ThilinaRodrigo/Rice-Leaf-AI-App",
     backendUrl: "https://github.com/ThilinaRodrigo/Rice-Leaf-AI-App/tree/main/backend-go",
+    publication: "A Comparative Study on Deep Transfer Learning Based Rice Leaf Disease Detection (Ritscon 2026 - University of Ruhuna)",
     status: "on going" // Or "completed"
   }
   ,

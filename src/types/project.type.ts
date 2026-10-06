@@ -10,4 +10,6 @@ export interface Project {
   frontendUrl?: string;
   backendUrl?: string;
   liveDemoUrl?: string;
+  publication?: string;
+  publicationUrl?: string;
 }

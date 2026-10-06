@@ -131,6 +131,19 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               </p>
             </div>
 
+            {/* Publication Banner if applicable */}
+            {project.publication && (
+              <div className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-start gap-3">
+                <div className="p-2 rounded-lg bg-blue-500/20 text-blue-400 shrink-0 mt-0.5">
+                  <Sparkles className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-xs font-semibold text-blue-400 uppercase tracking-wider">Associated Research Publication</h4>
+                  <p className="text-sm font-medium text-white mt-0.5">{project.publication}</p>
+                </div>
+              </div>
+            )}
+
             {/* Technologies */}
             <div className="pt-2 border-t border-gray-800/80">
               <h3 className="text-base font-semibold text-white mb-3 flex items-center gap-2">

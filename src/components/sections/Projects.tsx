@@ -248,7 +248,6 @@ export default function Projects() {
               ))}
         </div>
 
-
         {/* Load More Button */}
         {visibleProjects < filteredProjects.length && (
           <div className="flex justify-center mt-14">
@@ -286,4 +285,3 @@ export default function Projects() {
     </section>
   );
 }
-
