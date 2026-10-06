@@ -42,9 +42,7 @@ export default function Projects() {
       id="projects"
       className="min-h-screen bg-transparent text-white px-6 lg:px-8 py-24 relative overflow-hidden border-t border-gray-800/40"
     >
-      {/* Background ambient lighting */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/10 blur-[140px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-10 right-10 w-[400px] h-[400px] bg-indigo-600/5 blur-[120px] pointer-events-none rounded-full" />
+
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}

@@ -14,9 +14,7 @@ export default function Publications() {
       id="publications"
       className="min-h-[70vh] bg-transparent text-white px-6 lg:px-8 py-24 relative overflow-hidden border-t border-gray-800/40"
     >
-      {/* Background ambient lighting */}
-      <div className="absolute top-1/3 left-1/4 w-[500px] h-[300px] bg-blue-600/10 blur-[140px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-10 right-10 w-[400px] h-[400px] bg-purple-600/5 blur-[130px] pointer-events-none rounded-full" />
+
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
