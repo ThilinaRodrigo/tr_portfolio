@@ -12,7 +12,7 @@ export default function Publications() {
   return (
     <section
       id="publications"
-      className="min-h-[70vh] bg-gray-950/60 backdrop-blur-3xl text-white px-6 lg:px-8 py-24 relative overflow-hidden border-t border-gray-900"
+      className="min-h-[70vh] bg-transparent text-white px-6 lg:px-8 py-24 relative overflow-hidden border-t border-gray-800/40"
     >
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 left-1/4 w-[500px] h-[300px] bg-blue-600/10 blur-[140px] pointer-events-none rounded-full" />

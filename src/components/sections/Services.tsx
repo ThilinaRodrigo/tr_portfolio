@@ -57,77 +57,95 @@ const Services: React.FC = () => {
   return (
     <section
       id="services"
-      className="min-h-screen bg-gray-950/40 backdrop-blur-3xl text-white px-8 py-20"
+      className="min-h-screen bg-transparent text-white px-8 py-20 border-t border-gray-800/40 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Features Bar */}
-        <div className="flex flex-wrap justify-center lg:justify-between items-center gap-8 mb-16 pb-8 border-b border-gray-800">
+        <div className="bg-gradient-to-r from-gray-900/80 via-gray-900/50 to-slate-950/80 border border-gray-800/80 backdrop-blur-xl rounded-2xl p-4 sm:p-5 shadow-xl mb-16 flex flex-wrap justify-around items-center gap-4">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"
+              className="flex items-center gap-3 px-4 py-2 rounded-xl bg-blue-500/10 border border-blue-500/20 text-gray-200 hover:text-white hover:bg-blue-500/20 hover:border-blue-400/40 transition-all duration-300 hover:scale-105 shadow-sm cursor-default"
             >
-              <div className="w-6 h-6 rounded-full border-2 border-blue-500 flex items-center justify-center text-blue-500">
+              <div className="p-1 rounded-md bg-blue-500/20 text-blue-400 shrink-0">
                 {feature.icon}
               </div>
-              <span className="text-sm lg:text-base">{feature.text}</span>
+              <span className="text-xs sm:text-sm font-semibold tracking-wide">{feature.text}</span>
             </div>
           ))}
         </div>
 
-        {/* What I Do Section */}
-        <div className="mb-12">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">What I Do</h2>
-          <p className="text-gray-400 text-lg max-w-3xl">
-            I help businesses grow by crafting high-quality software solutions
-            tailored to their needs.
-          </p>
-        </div>
+        {/* What I Do Section Header */}
+        <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
+          <div className="space-y-3">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs sm:text-sm font-semibold">
+              <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+              <span>Services & Expertise</span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+              What I Do
+            </h2>
+            <p className="text-gray-400 text-base sm:text-lg max-w-2xl leading-relaxed">
+              I help businesses and teams grow by crafting high-quality, scalable software solutions tailored to their technical needs.
+            </p>
+          </div>
 
-        {/* Carousel */}
-        <div className="relative">
           {/* Navigation Buttons */}
-          <div className="absolute -top-20 right-0 items-center gap-4 hidden lg:flex">
+          <div className="hidden lg:flex items-center gap-3">
             <button
               onClick={prevSlide}
-              className="w-12 h-12 rounded-full border border-gray-700 hover:border-blue-500 flex items-center justify-center transition-all duration-300 hover:bg-blue-500/10"
+              className="w-12 h-12 rounded-2xl border border-gray-800 bg-gray-900/60 hover:bg-blue-600/20 hover:border-blue-500/50 flex items-center justify-center transition-all duration-300 backdrop-blur-md shadow-md cursor-pointer group"
+              aria-label="Previous slide"
             >
-              <span className="text-xl text-gray-400 hover:text-blue-500" >
-                <FiChevronLeft size={24} />
-              </span>
+              <FiChevronLeft className="w-6 h-6 text-gray-400 group-hover:text-blue-400 transition-colors" />
             </button>
             <button
               onClick={nextSlide}
-              className="w-12 h-12 rounded-full border border-gray-700 hover:border-blue-500 flex items-center justify-center transition-all duration-300 hover:bg-blue-500/10"
+              className="w-12 h-12 rounded-2xl border border-gray-800 bg-gray-900/60 hover:bg-blue-600/20 hover:border-blue-500/50 flex items-center justify-center transition-all duration-300 backdrop-blur-md shadow-md cursor-pointer group"
+              aria-label="Next slide"
             >
-              <span className="text-xl text-gray-400 hover:text-blue-500" >
-                <FiChevronRight size={24} />
-              </span>
+              <FiChevronRight className="w-6 h-6 text-gray-400 group-hover:text-blue-400 transition-colors" />
             </button>
           </div>
+        </div>
 
-          {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {visibleServices.map((service, index) => (
-              <div
-                key={currentIndex + index}
-                className="group relative bg-gray-800/30 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-500 hover:shadow-xl hover:shadow-blue-500/10"
-              >
-                {/* Icon */}
-                <div className="w-16 h-16 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-500 mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 text-4xl">
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {visibleServices.map((service, index) => (
+            <div
+              key={currentIndex + index}
+              className="group relative bg-gradient-to-br from-gray-900/80 via-gray-900/50 to-slate-950/80
+                         backdrop-blur-xl border border-gray-800/80 rounded-2xl p-8
+                         hover:border-blue-500/50 transition-all duration-500
+                         hover:shadow-[0_12px_40px_rgba(37,99,235,0.18)] hover:-translate-y-2 flex flex-col justify-between"
+            >
+              {/* Background Glow on hover */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-full blur-3xl group-hover:bg-blue-500/20 transition-all duration-500 pointer-events-none" />
+
+              <div>
+                {/* Icon Box */}
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/15 via-blue-500/10 to-indigo-500/5 border border-blue-500/25 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-400 transition-all duration-500 shadow-md shadow-blue-500/10 text-3xl sm:text-4xl">
                   {service.icon}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-2xl font-extrabold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300 leading-snug">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-400 leading-relaxed">{service.description}</p>
+                <p className="text-gray-400 text-sm sm:text-base leading-relaxed font-normal">
+                  {service.description}
+                </p>
               </div>
-            ))}
-          </div>
+
+              {/* Bottom decorative accent */}
+              <div className="mt-8 pt-4 border-t border-gray-800/60 flex items-center justify-between text-xs font-semibold text-blue-400 opacity-80 group-hover:opacity-100 transition-opacity">
+                <span>Tailored Engineering</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-400 group-hover:scale-150 transition-transform" />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

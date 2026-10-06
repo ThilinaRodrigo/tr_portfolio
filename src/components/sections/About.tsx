@@ -25,7 +25,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen bg-gray-950/40 backdrop-blur-3xl text-white px-6 lg:px-8 py-24 relative overflow-hidden"
+      className="min-h-screen bg-transparent text-white px-6 lg:px-8 py-24 border-t border-gray-800/40 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto space-y-20 relative z-10">
         

@@ -48,8 +48,8 @@ export default function AnimatedBackground() {
         className="absolute bottom-10 left-1/4 w-[600px] h-[600px] bg-sky-500/20 rounded-full blur-[140px]"
       />
 
-      {/* Sleek Grid Overlay Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#3b82f615_1px,transparent_1px),linear-gradient(to_bottom,#3b82f615_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_70%_70%_at_50%_50%,#000_80%,transparent_100%)] opacity-80" />
+      {/* Sleek Square Grid Overlay Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#3b82f625_1px,transparent_1px),linear-gradient(to_bottom,#3b82f625_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-90 pointer-events-none" />
     </div>
   );
 }
