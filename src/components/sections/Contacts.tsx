@@ -97,38 +97,41 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen bg-gray-950/40 backdrop-blur-3xl text-white px-8 py-20"
+      className="min-h-screen bg-transparent text-white px-8 py-20 border-t border-gray-800/40 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs sm:text-sm font-semibold mb-2">
+            <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+            <span>Get In Touch</span>
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
             Let's Work Together
           </h2>
-          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-            Have a project in mind? I'd love to hear about it. Send me a message
-            and I’ll get back to you as soon as possible.
+          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+            Have a project in mind, research inquiry, or opportunity? I'd love to hear about it. Send me a message and I’ll get back to you as soon as possible.
           </p>
         </div>
 
         {/* Contact Grid */}
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Left - Contact Info */}
+          {/* Left - Contact Info Cards */}
           <div className="space-y-6">
             {contactInfo.map((info, index) => (
               <a
                 key={index}
                 href={info.link}
-                className="group block bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm border border-gray-800 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1"
+                className="group block bg-gradient-to-br from-gray-900/80 via-gray-900/50 to-slate-950/80 backdrop-blur-xl border border-gray-800/80 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-500 hover:shadow-[0_12px_40px_rgba(37,99,235,0.18)] hover:-translate-y-1.5"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-500 group-hover:scale-110 group-hover:bg-blue-600/20 transition-all duration-300">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500/15 to-indigo-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-md shadow-blue-500/10 text-2xl">
                     {info.icon}
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">{info.title}</h3>
-                    <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors">
+                    <h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-300 transition-colors">{info.title}</h3>
+                    <p className="text-gray-400 text-sm group-hover:text-gray-200 transition-colors">
                       {info.detail}
                     </p>
                   </div>
@@ -137,17 +140,17 @@ export default function Contact() {
             ))}
           </div>
 
-          {/* Right - Contact Form */}
+          {/* Right - Contact Form Container */}
           <div className="lg:col-span-2">
             <form
               ref={form}
               onSubmit={handleSubmit}
-              className="bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 space-y-6"
+              className="bg-gradient-to-br from-gray-900/80 via-gray-900/50 to-slate-950/80 backdrop-blur-xl border border-gray-800/80 rounded-2xl p-8 sm:p-10 space-y-6 shadow-2xl relative overflow-hidden"
             >
               {/* Name & Email */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-gray-300">
+                  <label className="block text-xs font-semibold uppercase tracking-wider mb-2 text-gray-300">
                     Your Name
                   </label>
                   <input
@@ -157,12 +160,12 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="John Doe"
-                    className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                    className="w-full px-4 py-3.5 bg-gray-950/60 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/80 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 backdrop-blur-md"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-gray-300">
+                  <label className="block text-xs font-semibold uppercase tracking-wider mb-2 text-gray-300">
                     Email Address
                   </label>
                   <input
@@ -172,14 +175,14 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="john@example.com"
-                    className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                    className="w-full px-4 py-3.5 bg-gray-950/60 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/80 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 backdrop-blur-md"
                   />
                 </div>
               </div>
 
               {/* Subject */}
               <div>
-                <label className="block text-sm font-medium mb-2 text-gray-300">
+                <label className="block text-xs font-semibold uppercase tracking-wider mb-2 text-gray-300">
                   Subject
                 </label>
                 <input
@@ -189,13 +192,13 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="Project Inquiry"
-                  className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                  className="w-full px-4 py-3.5 bg-gray-950/60 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/80 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 backdrop-blur-md"
                 />
               </div>
 
               {/* Message */}
               <div>
-                <label className="block text-sm font-medium mb-2 text-gray-300">
+                <label className="block text-xs font-semibold uppercase tracking-wider mb-2 text-gray-300">
                   Message
                 </label>
                 <textarea
@@ -205,7 +208,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="Tell me about your project..."
-                  className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all resize-none"
+                  className="w-full px-4 py-3.5 bg-gray-950/60 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/80 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 backdrop-blur-md resize-none"
                 />
               </div>
 
@@ -213,11 +216,11 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={loading}
-                className={`group px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg flex items-center gap-2
+                className={`group px-8 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300 shadow-lg flex items-center gap-2.5 cursor-pointer
                   ${
                     loading
-                      ? "bg-blue-600/60 cursor-not-allowed"
-                      : "bg-blue-600 hover:bg-blue-700 hover:scale-[1.02] shadow-blue-500/25 hover:shadow-blue-500/40"
+                      ? "bg-blue-600/60 cursor-not-allowed text-gray-300"
+                      : "bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white shadow-blue-600/30 hover:shadow-blue-600/50 hover:scale-[1.02]"
                   }`}
               >
                 {loading ? (
@@ -235,8 +238,7 @@ export default function Contact() {
                 )}
               </button>
 
-
-              {status && <p className="mt-2 text-center">{status}</p>}
+              {status && <p className="mt-2 text-center text-sm font-medium text-emerald-400">{status}</p>}
             </form>
           </div>
         </div>

@@ -13,10 +13,6 @@ const Hero: React.FC = () => {
       id="hero"
       className="relative min-h-screen bg-transparent text-white flex items-center px-6 lg:px-12 pt-28 sm:pt-32 lg:pt-36 pb-16 lg:pb-20 overflow-hidden"
     >
-      {/* Background ambient lighting effects */}
-      <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/15 blur-[160px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-10 right-1/4 w-[400px] h-[400px] bg-indigo-600/10 blur-[140px] pointer-events-none rounded-full" />
-
       <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
         {/* LEFT CONTENT (Cols 1-7) */}
         <motion.div
@@ -26,7 +22,7 @@ const Hero: React.FC = () => {
           className="space-y-6 lg:col-span-7 order-2 lg:order-1"
         >
           {/* Status pill */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs sm:text-sm font-medium backdrop-blur-md shadow-sm">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs sm:text-sm font-semibold backdrop-blur-md shadow-sm">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -35,17 +31,17 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Heading */}
-          <div className="space-y-2">
+          <div className="space-y-3">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
               Hi, I’m <br />
-              <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-blue-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 via-sky-300 to-indigo-400 bg-clip-text text-transparent drop-shadow-sm">
                 Thilina Rodrigo
               </span>
             </h1>
-            <p className="text-xl sm:text-2xl font-semibold text-gray-200 flex flex-wrap items-center gap-2 pt-1">
-              <span>Full-Stack Developer</span>
-              <span className="text-blue-500">•</span>
-              <span className="text-gray-400 font-normal">CS Undergraduate</span>
+            <p className="text-xl sm:text-2xl font-bold text-gray-200 flex flex-wrap items-center gap-2 pt-1">
+              <span className="text-blue-400">Full-Stack Developer</span>
+              <span className="text-gray-500">•</span>
+              <span className="text-gray-300 font-semibold">CS Undergraduate</span>
             </p>
           </div>
 
@@ -55,17 +51,17 @@ const Hero: React.FC = () => {
           </p>
 
           {/* Key highlights strip */}
-          <div className="flex flex-wrap gap-4 pt-1 text-xs sm:text-sm text-gray-300">
-            <div className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-blue-400" />
+          <div className="flex flex-wrap gap-2.5 pt-1">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs sm:text-sm font-medium backdrop-blur-md">
+              <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0" />
               <span>Clean Architecture</span>
             </div>
-            <div className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-blue-400" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs sm:text-sm font-medium backdrop-blur-md">
+              <CheckCircle2 className="w-4 h-4 text-indigo-400 shrink-0" />
               <span>Microservices & REST APIs</span>
             </div>
-            <div className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-blue-400" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-300 text-xs sm:text-sm font-medium backdrop-blur-md">
+              <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
               <span>Modern Frontend Design</span>
             </div>
           </div>
@@ -76,7 +72,7 @@ const Hero: React.FC = () => {
               to="projects"
               smooth
               duration={500}
-              className="group cursor-pointer px-7 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white rounded-xl font-semibold text-sm shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 hover:scale-[1.02] transition-all duration-300 flex items-center gap-2"
+              className="group cursor-pointer px-7 py-3.5 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-xl font-semibold text-sm shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 hover:scale-[1.02] transition-all duration-300 flex items-center gap-2"
             >
               <span>View Projects</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -86,7 +82,7 @@ const Hero: React.FC = () => {
               href={resume}
               download
               title="Download CV"
-              className="flex items-center gap-2 px-6 py-3.5 bg-gray-900/90 hover:bg-gray-800 text-gray-200 hover:text-white border border-gray-700/80 hover:border-gray-600 rounded-xl font-medium text-sm transition-all shadow-md hover:scale-[1.02]"
+              className="flex items-center gap-2 px-6 py-3.5 bg-gray-900/90 hover:bg-gray-800 text-gray-200 hover:text-white border border-gray-700/80 hover:border-gray-600 rounded-xl font-semibold text-sm transition-all shadow-md hover:scale-[1.02]"
             >
               <HiDownload className="w-5 h-5 text-emerald-400" />
               <span>Download CV</span>
@@ -96,7 +92,7 @@ const Hero: React.FC = () => {
               to="contact"
               smooth
               duration={500}
-              className="cursor-pointer px-6 py-3.5 bg-transparent border border-gray-800 hover:border-gray-700 text-gray-400 hover:text-white rounded-xl font-medium text-sm transition"
+              className="cursor-pointer px-6 py-3.5 bg-blue-600/15 hover:bg-blue-600 text-blue-300 hover:text-white border border-blue-500/30 hover:border-blue-400 rounded-xl font-semibold text-sm shadow-md shadow-blue-600/15 hover:shadow-blue-600/40 hover:scale-[1.02] transition-all duration-300"
             >
               Contact Me
             </Link>
@@ -104,7 +100,7 @@ const Hero: React.FC = () => {
 
           {/* SOCIAL LINKS */}
           <div className="flex items-center gap-3 pt-4 border-t border-gray-800/60 max-w-lg">
-            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider mr-2">
+            <span className="text-xs font-bold text-gray-500 uppercase tracking-wider mr-2">
               Connect:
             </span>
 
@@ -160,7 +156,7 @@ const Hero: React.FC = () => {
           {/* Main Avatar Card Frame */}
           <div className="relative group max-w-sm sm:max-w-md w-full">
             {/* Ambient Backlight Glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur-2xl opacity-40 group-hover:opacity-60 transition duration-700 pointer-events-none" />
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 rounded-3xl blur-2xl opacity-40 group-hover:opacity-70 transition duration-700 pointer-events-none animate-pulse" />
 
             <div className="relative rounded-3xl overflow-hidden p-2 bg-gradient-to-b from-gray-800/80 via-gray-900/90 to-gray-950 border border-gray-700/60 shadow-2xl backdrop-blur-xl">
               <img
@@ -176,9 +172,9 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="absolute -top-4 left-2 sm:-left-4 px-4 py-2.5 rounded-2xl bg-gray-900/90 border border-gray-700/80 backdrop-blur-xl shadow-xl flex items-center gap-3"
+              className="absolute -top-4 left-2 sm:-left-4 px-4 py-2.5 rounded-2xl bg-gray-900/95 border border-gray-700/80 backdrop-blur-xl shadow-xl flex items-center gap-3"
             >
-              <div className="p-2 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20">
+              <div className="p-2 rounded-xl bg-blue-500/15 text-blue-400 border border-blue-500/30">
                 <Code2 className="w-4 h-4" />
               </div>
               <div>
@@ -192,9 +188,9 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              className="absolute -bottom-5 right-2 sm:-right-4 px-4 py-2.5 rounded-2xl bg-gray-900/90 border border-gray-700/80 backdrop-blur-xl shadow-xl flex items-center gap-3"
+              className="absolute -bottom-5 right-2 sm:-right-4 px-4 py-2.5 rounded-2xl bg-gray-900/95 border border-gray-700/80 backdrop-blur-xl shadow-xl flex items-center gap-3"
             >
-              <div className="p-2 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              <div className="p-2 rounded-xl bg-indigo-500/15 text-indigo-400 border border-indigo-500/30">
                 <Terminal className="w-4 h-4" />
               </div>
               <div>
@@ -210,4 +206,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-

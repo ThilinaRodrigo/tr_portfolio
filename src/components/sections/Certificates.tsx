@@ -174,7 +174,7 @@ export default function Certificates() {
           <div className="flex justify-center mt-4">
             <button
               onClick={loadLess}
-              className="px-8 py-3 bg-transparent border border-gray-700 rounded-lg font-semibold hover:bg-gray-800 transition text-gray-400"
+              className="px-8 py-3 bg-blue-600/15 hover:bg-blue-600 text-blue-300 hover:text-white border border-blue-500/30 hover:border-blue-400 rounded-xl font-semibold text-sm shadow-md shadow-blue-600/15 hover:shadow-blue-600/40 hover:scale-[1.02] transition-all duration-300 cursor-pointer"
             >
               Show Less
             </button>

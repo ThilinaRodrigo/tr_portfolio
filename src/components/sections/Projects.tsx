@@ -40,11 +40,9 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen bg-gray-950/40 backdrop-blur-3xl text-white px-6 lg:px-8 py-24 relative overflow-hidden"
+      className="min-h-screen bg-transparent text-white px-6 lg:px-8 py-24 relative overflow-hidden border-t border-gray-800/40"
     >
-      {/* Background ambient lighting */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/10 blur-[140px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-10 right-10 w-[400px] h-[400px] bg-indigo-600/5 blur-[120px] pointer-events-none rounded-full" />
+
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
@@ -248,7 +246,6 @@ export default function Projects() {
               ))}
         </div>
 
-
         {/* Load More Button */}
         {visibleProjects < filteredProjects.length && (
           <div className="flex justify-center mt-14">
@@ -266,7 +263,7 @@ export default function Projects() {
           <div className="flex justify-center mt-4">
             <button
               onClick={loadLess}
-              className="px-8 py-3 bg-transparent border border-gray-800 rounded-xl font-semibold text-gray-400 hover:bg-gray-800 hover:text-white transition-all duration-300 cursor-pointer"
+              className="px-8 py-3 bg-blue-600/15 hover:bg-blue-600 text-blue-300 hover:text-white border border-blue-500/30 hover:border-blue-400 rounded-xl font-semibold text-sm shadow-md shadow-blue-600/15 hover:shadow-blue-600/40 hover:scale-[1.02] transition-all duration-300 cursor-pointer"
             >
               Show Less
             </button>
@@ -286,4 +283,3 @@ export default function Projects() {
     </section>
   );
 }
-
